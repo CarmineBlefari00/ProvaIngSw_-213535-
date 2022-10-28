@@ -81,4 +81,26 @@ public class FunnyAlgorithmsTest
     	}
     	assertTrue(controllo);
     }
+    
+    @Test
+    public void shouldBeSortedDescending()
+    {
+    	int[] array = {3,2,1};
+    	int[] correctArray = {1,2,3};
+    	funny.selectionSort(array,1);
+    	boolean controllo = false;
+    	for(int i = 0 ; i < array.length ; i++)
+    	{
+    		if(array[i] == correctArray[i])
+    		{
+    			controllo = true;
+    		}
+    		else
+    		{
+    			controllo = false;
+    			break;
+    		}
+    	}
+    	assertTrue(controllo);
+    }
 }
