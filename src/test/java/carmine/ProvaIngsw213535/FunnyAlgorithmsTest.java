@@ -59,4 +59,26 @@ public class FunnyAlgorithmsTest
     	int myNum = 10;
     	assertEquals(-1,funny.binarySearch(array , myNum));
     }
+    
+    @Test
+    public void shouldBeSortedAscending()
+    {
+    	int[] array = {1,2,3};
+    	int[] correctArray = {3,2,1};
+    	funny.selectionSort(array,0);
+    	boolean controllo = false;
+    	for(int i = 0 ; i < array.length ; i++)
+    	{
+    		if(array[i] == correctArray[i])
+    		{
+    			controllo = true;
+    		}
+    		else
+    		{
+    			controllo = false;
+    			break;
+    		}
+    	}
+    	assertTrue(controllo);
+    }
 }
