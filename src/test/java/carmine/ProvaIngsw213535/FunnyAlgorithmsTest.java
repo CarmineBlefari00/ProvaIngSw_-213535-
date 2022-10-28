@@ -17,4 +17,11 @@ public class FunnyAlgorithmsTest
     {
         assertTrue( true );
     }
+    
+    @Test
+    public void shouldBeNotZero()
+    {
+    	String prova = "40000";
+    	assert(FunnyAlgorithms.stringToIntConverter(prova) != 0);
+    }
 }
