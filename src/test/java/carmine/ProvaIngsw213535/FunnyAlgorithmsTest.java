@@ -30,23 +30,16 @@ public class FunnyAlgorithmsTest
     }
     
     @Test
-    public void shouldBeNotZero()
+    public void shouldBeInInterval()
     {
     	String prova = "4000";
     	assert(FunnyAlgorithms.stringToIntConverter(prova) != 0);
     }
     
     @Test
-    public void shouldBeInteger()
+    public void shouldBeIntegerAndWellDone()
     {
     	String prova2 = "9";
     	assert(FunnyAlgorithms.stringToIntConverter(prova2) == 9);
-    }
-    
-    @Test
-    public void shouldntHaveLettere()
-    {
-    	String prova3 = "a123";
-    	assert(FunnyAlgorithms.stringToIntConverter(prova3) == -1);
     }
 }
