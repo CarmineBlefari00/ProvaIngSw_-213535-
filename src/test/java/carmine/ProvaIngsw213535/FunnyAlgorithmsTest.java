@@ -1,5 +1,6 @@
 package carmine.ProvaIngsw213535;
 
+import static org.junit.Assert.assertEquals;
 import static org.junit.Assert.assertTrue;
 
 import org.junit.BeforeClass;
@@ -33,13 +34,21 @@ public class FunnyAlgorithmsTest
     public void shouldBeInInterval()
     {
     	String prova = "4000";
-    	assert(FunnyAlgorithms.stringToIntConverter(prova) != 0);
+    	assert(funny.stringToIntConverter(prova) != 0);
     }
     
     @Test
     public void shouldBeIntegerAndWellDone()
     {
     	String prova2 = "9";
-    	assert(FunnyAlgorithms.stringToIntConverter(prova2) == 9);
+    	assert(funny.stringToIntConverter(prova2) == 9);
+    }
+    
+    @Test 
+    public void shouldFindPosition()
+    {
+    	int[] array = {1 , 2 , 3};
+    	int myNum = 2;
+    	assertEquals(1,funny.binarySearch(array , myNum));
     }
 }
