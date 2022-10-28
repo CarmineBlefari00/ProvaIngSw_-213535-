@@ -3,6 +3,7 @@ package carmine.ProvaIngsw213535;
 import static org.junit.Assert.assertEquals;
 import static org.junit.Assert.assertTrue;
 
+import org.joda.time.LocalTime;
 import org.junit.BeforeClass;
 import org.junit.Test;
 
@@ -23,53 +24,58 @@ public class FunnyAlgorithmsTest
 		System.out.println("Before class");
 		funny = new FunnyAlgorithms();
 	}
-	
-    @Test
-    public void shouldAnswerWithTrue()
-    {
-        assertTrue( true );
-    }
     
     @Test
     public void shouldBeInInterval()
     {
+    	System.out.println("Test starts : " + LocalTime.now());
     	String prova = "4000";
     	assert(funny.stringToIntConverter(prova) != 0);
+    	System.out.println("Test ends : " + LocalTime.now());
     }
     
     @Test
     public void NotInInterval()
     {
+    	System.out.println("Test starts : " + LocalTime.now());
     	String prova = "40000";
     	assert(funny.stringToIntConverter(prova) == 0);
+    	System.out.println("Test ends : " + LocalTime.now());
     }
     
     @Test
     public void shouldBeIntegerAndWellDone()
     {
+    	System.out.println("Test starts : " + LocalTime.now());
     	String prova2 = "9";
     	assert(funny.stringToIntConverter(prova2) == 9);
+    	System.out.println("Test ends : " + LocalTime.now());
     }
     
     @Test 
     public void shouldFindPosition()
     {
+    	System.out.println("Test starts : " + LocalTime.now());
     	int[] array = {1 , 2 , 3};
     	int myNum = 2;
     	assertEquals(1,funny.binarySearch(array , myNum));
+    	System.out.println("Test ends : " + LocalTime.now());
     }
     
     @Test 
     public void shouldNotFindPosition()
     {
+    	System.out.println("Test starts : " + LocalTime.now());
     	int[] array = {1 , 2 , 3};
     	int myNum = 10;
     	assertEquals(-1,funny.binarySearch(array , myNum));
+    	System.out.println("Test ends : " + LocalTime.now());
     }
     
     @Test
     public void shouldBeSortedAscending()
     {
+    	System.out.println("Test starts : " + LocalTime.now());
     	int[] array = {1,2,3};
     	int[] correctArray = {3,2,1};
     	funny.selectionSort(array,0);
@@ -87,11 +93,13 @@ public class FunnyAlgorithmsTest
     		}
     	}
     	assertTrue(controllo);
+    	System.out.println("Test ends : " + LocalTime.now());
     }
     
     @Test
     public void shouldBeSortedDescending()
     {
+    	System.out.println("Test starts : " + LocalTime.now());
     	int[] array = {3,2,1};
     	int[] correctArray = {1,2,3};
     	funny.selectionSort(array,1);
@@ -109,5 +117,6 @@ public class FunnyAlgorithmsTest
     		}
     	}
     	assertTrue(controllo);
+    	System.out.println("Test ends : " + LocalTime.now());
     }
 }
