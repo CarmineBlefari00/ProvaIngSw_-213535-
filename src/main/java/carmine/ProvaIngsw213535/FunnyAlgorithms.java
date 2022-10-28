@@ -77,11 +77,4 @@ public class FunnyAlgorithms {
 		}
 		return convertita;
 	}
-	
-	public void stampaConvertita()
-	{
-		String prova = "ciao";
-		System.out.println(stringToIntConverter(prova));
-	}
-
 }
