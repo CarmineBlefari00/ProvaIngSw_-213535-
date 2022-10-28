@@ -51,4 +51,12 @@ public class FunnyAlgorithmsTest
     	int myNum = 2;
     	assertEquals(1,funny.binarySearch(array , myNum));
     }
+    
+    @Test 
+    public void shouldNotFindPosition()
+    {
+    	int[] array = {1 , 2 , 3};
+    	int myNum = 10;
+    	assertEquals(-1,funny.binarySearch(array , myNum));
+    }
 }
