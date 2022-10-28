@@ -38,6 +38,13 @@ public class FunnyAlgorithmsTest
     }
     
     @Test
+    public void NotInInterval()
+    {
+    	String prova = "40000";
+    	assert(funny.stringToIntConverter(prova) == 0);
+    }
+    
+    @Test
     public void shouldBeIntegerAndWellDone()
     {
     	String prova2 = "9";
